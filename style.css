@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+body{
+	color: #1f224a;
+    font-size:12px;
+    letter-spacing:2px;
+    line-height:2;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.box{
+    color: #000;
+	justify-content: center;
+	align-items: center;
+    display:flex;
+    flex-flow: column;
+}
+
+.box2{
+    width: 700px;
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.nav {
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+	text-align: center;   /* リストアイテムを中央揃え */
+	margin-top: 20px;     /* 画像の下にスペースを追加 */
+}
+
+.nav li{
+	padding: 10px;
+}
+
+.nav a{
+	color: #2a94bb;
+}
+
+.container {
+	display: flex;
+	align-items: flex-end;
+	margin: 0 auto 20px auto;
+}
+.text {
+	margin-left: 20px;
+	line-height: 1.5;
+}
+
+.hotel{
+	font-size: 12px;
+}
+
+.ttl{
+	font-size: 20px;
+}
+
+p{
+	margin: 20px auto;
+}
+
+/* リンク */
+
+a {
+	padding: 0.1em 0.3em;
+	position: relative;
+	display: inline-block;
+	transition: .3s;
+	color: #2a94bb;
+    text-decoration: none;
+}
+
+a:hover {
+	color:#fff;
+}
+
+/* 装飾 */
+
+hr {
+    height: 0;
+    margin: 0 auto 25px auto;
+    padding: 0;
+    border: 0;
+    width: 200px;
+    border-top: 1px solid #000;
+}
+
+mark{
+	color: #fff;
+	background-color: #2a94bb;
+	padding: 0.5em;
+}
+
+input{
+    background-color: transparent;
+    color: #000;
+    font-size: 12px;
+    border: solid 1px #151515;
+}
+
+
+/*========= ページネーションCSS ===============*/
+
+.pagination {
+	position:fixed;
+	right:20px;
+	top: 50%;
+  	transform: translateY(-50%);
+	font-size:1em;
+	z-index: 10;
+	list-style: none;
+}
+
+.pagination a {
+	display:block;
+	height:20px;
+	margin-bottom:5px;
+	color: #2a94bb;
+	position:relative;
+	padding:4px;
+	white-space: nowrap;
+}
+
+.pagination a.active:after {
+	box-shadow:inset 0 0 0 5px;
+}
+
+/*現在地表示のテキストの設定*/
+.pagination a .hover-text {
+	position:absolute;
+	right:15px;
+	top:0;
+	opacity:0;
+	-webkit-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+	padding-right: 15px;
+}
+
+.pagination a:hover .hover-text {
+	opacity: 1;
+}
+
+.pagination a:after {
+	-webkit-transition:box-shadow 0.5s ease;
+	transition:box-shadow 0.5s ease;
+	width:10px;
+	height:10px;
+	display: block;
+	border:1px solid;
+	border-radius:50%;
+	content:"";
+	position: absolute;
+	margin:auto;
+	top:0;
+	right:3px;
+	bottom:0;
+}
+
+/*768px以下は現在地表示のテキストを非表示*/
+@media screen and (max-width:768px) { 
+	.pagination a .hover-text{
+		display: none;
+	}	
+}
+
+/* メディアクエリ */
+
+@media screen and (max-width:768px){
+
+	body{font-size:11px;
+		letter-spacing:1.8px;}
+	.box2{width: 80%;}
+	.link{width: 80%;}
+	
+	}
